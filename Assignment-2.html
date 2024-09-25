@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+  *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Roboto;
+  }
+  .container{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+  .formDiv
+  {
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    background-color:#e9f5ff;
+    border: 1px solid #e9f5ff;
+    margin-top: 15px;
+  }
+  form{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 6px;
+    padding: 10px;
+  }
+  label{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-weight: bold;
+  }
+  .heading{
+    font-size: 35px;
+    font-weight: bold;
+  }
+  input,select{
+    padding: 10px;
+    border: 1px solid rgb(213, 209, 209);
+    border-radius: 8px;
+  }
+  .formBtn{
+    background-color: #007bff;
+    padding: 10px;
+    font-size: 17px;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    margin-top: 8px;
+  }
+  .formBtn:hover{
+    background-color: #1466be;
+  }
+  .employeeList {
+    background-color: rgba(211, 211, 211, 0.207);
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 20px 15px 30px 15px;
+}
+
+.lists {
+    text-align: left; 
+}
+
+ol {
+    padding-left: 20px;
+    margin: 0;
+}
+
+li {
+    padding: 5px 0; 
+}
+.hr1{
+  border-width: 90%;
+  margin-top: 10px;
+  border-color: rgba(211, 211, 211, 0.293);
+}
+a{
+  color:#107df3;
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
+}
+.employeeDetails{
+  border:1px solid rgba(128, 128, 128, 0.234);
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 20px;
+  width: 100%;
+}
+table{
+  margin-top: 15px;
+  text-align: left;
+  font-size: 18px;
+  padding: 16px;
+  border-spacing: 0;
+  width: 100%;
+}
+th{
+  background-color: #007bff;
+  color: white;
+  height: 48px;
+  padding-left: 16px;
+  padding-right: 10px;
+  font-size: 15px;
+}
+td{
+  padding: 16px;
+}
+.img1{
+  width:50px;
+  height:50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.hr-Td{
+  padding: 0;
+  border-color: rgba(128, 128, 128, 0);
+}
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 10px; 
+  }
+  
+  .heading {
+    font-size: 28px; 
+  }
+
+  form {
+    padding: 5px;
+  }
+
+  input, select {
+    padding: 8px; 
+    font-size: 14px; 
+  }
+
+  .formBtn {
+    font-size: 14px;
+    padding: 8px; 
+  }
+
+  .employeeList, .employeeDetails {
+    padding: 10px; 
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  th, td {
+    padding: 8px;
+    font-size: 14px; 
+  }
+
+  .img1 {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .heading {
+    font-size: 24px; 
+  }
+
+  th, td {
+    font-size: 12px;
+    padding: 5px; 
+  }
+
+  input, select {
+    padding: 6px;
+  }
+
+  .formBtn {
+    padding: 6px;
+    font-size: 12px; /
+  }
+
+  .img1 {
+    width: 30px; 
+    height: 30px;
+  }
+
+  iframe {
+    height: 250px; 
+  }
+}
+
+</style>
+<body>
+  <main>
+    <section>
+      <div class="container" id="container">
+        <p class="heading">Company Directory Portal</p>
+          <div class="formDiv">
+            <h1>Employee Registration Form</h1>
+            <form action="">
+              <label for="fullName">
+                Full Name:
+                <input type="text" name="fullName" id="fullname">
+              </label>
+              <label for="email">
+                Email:
+                <input type="email" name="fullName" id="fullname">
+              </label>
+              <label for="department">
+                Department:
+                <select name="department" id="department">
+                  <option value="it" selected >IT</option>
+                  <option value="hr" >HR</option>
+                  <option value="finance" >Finance</option>
+                  <option value="marketing" >Marketing</option>
+                </select>
+              </label>
+              <label for="employeeId">
+                Employee ID:
+                <input type="number" name="employeeId" id="employeeId">
+              </label>
+              <label for="fullName">
+                Profile Picture URL:
+                <input type="url" name="profile" id="profile">
+              </label>
+              <button class="formBtn" type="submit">Register Employee</button>
+            </form>
+          </div>
+         <div class="employeeList">
+          <h2>Employee List</h2>
+          <div class="lists">
+            <ol>
+              <li>
+                <a href="#container">John Doe - john@example.com</a>
+              </li>
+            <hr class="hr1">
+              <li>
+                <a href="#container">Jane Smith - jane@example.com</a>
+              </li>
+              <hr class="hr1">
+            </ol>
+          </div>
+         </div>
+         <div class="employeeDetails">
+          <h2>Employee Details</h2>
+           <table>
+            <tr>
+              <th>Name</th>
+              <th>Employee ID</th>
+              <th>Department</th>
+              <th>Profile Picture</th>
+            </tr>
+            <tr>
+              <td>John Doe</td>
+              <td>12345</td>
+              <td>IT</td>
+              <td class="imgTd"><img src="https://pre00.deviantart.net/6bf4/th/pre/f/2011/211/3/4/john_doe_render_by_bookahz-d424vel.png" alt="profile" class="img1"></td>
+            </tr>
+            <tr class="hr-Td">
+              <td class="hr-Td" colspan="4"><hr></td>
+            </tr>
+            <tr>
+              <td>Jane Smith</td>
+              <td>67890</td>
+              <td>HR</td>
+              <td><img src="https://tse3.mm.bing.net/th?id=OIP.Me1uLdUZ4dBfHw3oIL0G_gAAAA&pid=Api&P=0&h=180" alt="profile" class="img1"></td>
+            </tr>
+            <tr class="hr-Td">
+              <td class="hr-Td" colspan="4" ><hr></td>
+            </tr>
+           </table>
+         </div>
+<div style="margin-top: 30px;">
+  <h2>Company Location</h2>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3616.920551695537!2d78.38741457493744!3d17.498030183408165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91f3fdf6bde9%3A0x752db86a6ab3be2a!2sInnomatics%20Research%20Labs!5e1!3m2!1sbn!2sin!4v1727277703639!5m2!1sbn!2sin" width="100%" height="400px" style="border:0;border-radius: 10px;margin-top: 20px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
